@@ -26,7 +26,7 @@ WIN_COMBINATIONS = [
 ]
 
 def move(board, index, char)
-
+  board[index] = char
 end
 def won?(board)
   array = false
