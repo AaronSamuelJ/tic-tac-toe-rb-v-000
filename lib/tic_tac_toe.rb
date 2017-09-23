@@ -28,6 +28,9 @@ WIN_COMBINATIONS = [
 def move(board, index, char)
   board[index] = char
 end
+def valid_move?(board, position)
+  position.to_i.between?(1,9) && board[position] != "X" or board[position] != "O"
+end
 def won?(board)
   array = false
   WIN_COMBINATIONS.each do |combo|
