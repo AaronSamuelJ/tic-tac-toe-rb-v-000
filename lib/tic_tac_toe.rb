@@ -25,7 +25,7 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
-def move(board, index)
+def move(board, index, char)
 
 end
 def won?(board)
