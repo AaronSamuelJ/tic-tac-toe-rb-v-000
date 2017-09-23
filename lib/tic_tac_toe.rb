@@ -1,3 +1,4 @@
+require 'pry'
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -29,6 +30,7 @@ def move(board, index, char)
   board[index] = char
 end
 def valid_move?(board, position)
+  binding.pry
   position.to_i.between?(1,9) && board[position] != "X" or board[position] != "O"
 end
 def won?(board)
