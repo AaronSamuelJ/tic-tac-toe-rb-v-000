@@ -85,5 +85,7 @@ def play(board)
     puts "Congratulations X!"
   elsif won?(board) && winner(board) == "O"
     puts "Congratulations O!"
+  else
+    puts "Cats Game!"
   end
 end
