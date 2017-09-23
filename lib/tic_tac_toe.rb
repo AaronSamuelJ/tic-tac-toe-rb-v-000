@@ -30,7 +30,7 @@ def move(board, index, char)
   board[index] = char
 end
 def valid_move?(board, position)
-  position.to_i.between?(1,9) && board[position] != "X" && board[position] != "O"
+  position.to_i.between?(0,8) && board[position] != "X" && board[position] != "O"
 end
 def won?(board)
   array = false
