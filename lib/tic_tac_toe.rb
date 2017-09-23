@@ -32,6 +32,14 @@ end
 def valid_move?(board, position)
   position.to_i.between?(0,8) && board[position] != "X" && board[position] != "O"
 end
+def turn(board)
+  if valid_move?(board, position)
+    move(board, index, char)
+    display_board(board)
+  else
+    turn(board)
+  end
+end
 def won?(board)
   array = false
   WIN_COMBINATIONS.each do |combo|
