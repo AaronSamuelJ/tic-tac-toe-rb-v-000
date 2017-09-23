@@ -81,4 +81,9 @@ def winner(board)
 end
 def play(board)
   turn(board) until over?(board)
+  if won?(board) && winner(board) == "X"
+    puts "Congratulations X!"
+  elsif won?(board) && winner(board) == "O"
+    puts "Congratulations O!"
+  end
 end
