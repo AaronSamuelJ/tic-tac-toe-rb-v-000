@@ -60,7 +60,11 @@ end
 def draw?(board)
   full?(board) && !won?(board)
 end
-
+def turn_count(board)
+  board.count do |cell|
+    cell == "X" or cell == "O"
+  end
+end
 def over?(board)
   draw?(board) or won?(board)
 end
