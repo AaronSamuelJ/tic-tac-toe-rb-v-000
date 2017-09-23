@@ -37,7 +37,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board, index, char)
+    move(board, index, current_player(board))
     display_board(board)
   else
     turn(board)
@@ -64,6 +64,9 @@ def turn_count(board)
   board.count do |cell|
     cell == "X" or cell == "O"
   end
+end
+def current_player(board)
+  turn_count(board).even? ? "X" : "O"
 end
 def over?(board)
   draw?(board) or won?(board)
